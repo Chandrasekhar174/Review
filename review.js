@@ -105,5 +105,42 @@ function listOfEng(arr)
 }
 console.log(listOfEng(people));
 
+function groupProfession(arr)
+{
+    
+    let obj={}
+    for(let p in arr)
+    {
+
+        let pro=arr[p].profession;
+        if(!obj[pro])
+        {
+            obj[pro]={};
+        }
+        obj[pro]=arr[p];
+    }
+    return obj;
+}
+
+function averagesalary(arr)
+{
+    let obj={};
+    for(let p in arr)
+    {
+        let pro=arr[p].profession;
+        if(!obj[pro])
+        {
+            obj[pro]={};
+        }
+        let sum=arr[p].salary;
+        obj[pro]+=sum;
+    }
+}
+console.log(averagesalary(people));
+
+
+// console.log(groupProfession(people));
+
+
 
   
